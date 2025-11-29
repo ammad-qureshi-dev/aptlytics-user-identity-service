@@ -1,0 +1,13 @@
+spring:
+  session:
+    jdbc:
+      initialize-schema: never
+
+server:
+  port: 8081
+  error:
+    include-message: always
+
+logging:
+  level:
+    com.booker_app.backend_service: debug
