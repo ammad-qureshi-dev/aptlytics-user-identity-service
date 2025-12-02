@@ -1,1 +1,3 @@
 rootProject.name = 'auth_service'
+
+include 'auth_service_models'

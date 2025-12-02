@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/api-info")
+@RequestMapping("/api/health")
 public class ApiInfoController {
 
-    @GetMapping
+    @GetMapping("/info")
     public ResponseEntity<ApiInfoDTO> apiInfo() {
         return ResponseEntity.ok(ApiInfoDTO.builder()
                         .dateChecked(LocalDate.now())
@@ -21,7 +21,7 @@ public class ApiInfoController {
                 .build());
     }
 
-    @GetMapping("/health-check")
+    @GetMapping
     public ResponseEntity<String> healthCheck() {
         return ResponseEntity.ok("Running");
     }
