@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0001
+      author: ammad
+      changes:
+        - sqlFile:
+            path: db/changelog/0001_create_schema_and_user_entities.sql
+            splitStatements: true
+            endDelimiter: ;
+  - changeSet:
+      id: 0002
+      author: ammad
+      changes:
+        - sqlFile:
+            path: db/changelog/0002_refactor_schema_name.sql
+            splitStatements: true
+            endDelimiter: ;

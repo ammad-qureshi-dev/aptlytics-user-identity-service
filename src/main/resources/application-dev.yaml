@@ -2,11 +2,10 @@ spring:
   application:
     name: user-identity-service
   liquibase:
-    # enable on deployment
     enabled: false
     change-log: classpath:db/changelog/master.yaml
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/postgres?user=${DB_USER_RW}&password=${DB_PWD_RW}
     username: ${DB_USER_RW}
     password: ${DB_PWD_RW}
     driver-class-name: org.postgresql.Driver
