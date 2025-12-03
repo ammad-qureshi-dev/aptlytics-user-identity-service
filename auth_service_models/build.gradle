@@ -13,6 +13,15 @@ repositories {
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.32'
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+    // Spring Web Dependency, gives ResponseEntity, HttpStatus, HttpHeaders
+    implementation 'org.springframework:spring-web:6.1.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 test {
