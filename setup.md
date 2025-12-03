@@ -6,7 +6,7 @@ Contents
 3. Liquibase Setup
 4. Package Publication (TBD)
 5. Docker Setup (TBD)
-6. GitHub Actions (TBD) 
+6. GitHub Actions(TBD) 
 
 ## 1. Environment Setup
 
