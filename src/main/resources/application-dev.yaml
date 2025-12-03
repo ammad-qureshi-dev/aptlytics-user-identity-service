@@ -1,34 +1,7 @@
 spring:
-  application:
-    name: user-identity-service
   liquibase:
     enabled: false
-    change-log: classpath:db/changelog/master.yaml
   datasource:
     url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/postgres?user=${DB_USER_RW}&password=${DB_PWD_RW}
     username: ${DB_USER_RW}
     password: ${DB_PWD_RW}
-    driver-class-name: org.postgresql.Driver
-    hikari:
-      maximum-pool-size: 10
-      data-source-properties:
-        prepare-threshold: 0
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: none
-      naming:
-        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-server:
-  port: 8081
-  error:
-    include-message: always
-logging:
-  level:
-    org.hibernate.SQL: debug
-    com.booker_app.backend_service: debug
-    liquibase.executor: debug
